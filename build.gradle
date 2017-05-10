@@ -1,0 +1,20 @@
+group 'edu.sdsu.its'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+war {
+  archiveName 'bookshelf.war'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "javax.ws.rs:javax.ws.rs-api:2.0"
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.17'
+    compile 'log4j:log4j:1.2.17'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
